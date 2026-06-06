@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Landing</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#000;
+      color:#fff;
+      overflow-x:hidden;
+    }
+
+    /* شاشة البداية */
+    .hero{
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      background: radial-gradient(circle, #111, #000);
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:42px;
+      margin-bottom:10px;
+      letter-spacing:1px;
+    }
+
+    .hero p{
+      opacity:0.75;
+      font-size:18px;
+    }
+
+    .btn{
+      margin-top:25px;
+      padding:12px 28px;
+      border-radius:30px;
+      border:none;
+      cursor:pointer;
+      background:#fff;
+      color:#000;
+      font-size:16px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
+    }
+
+    /* فيديو */
+    .video-section{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      background:#0a0a0a;
+      gap:20px;
+      padding:40px 15px;
+    }
+
+    .video-section h2,
+    .qr-section h2{
+      font-size:28px;
+    }
+
+    video{
+      width:85%;
+      max-width:900px;
+      border-radius:12px;
+      box-shadow:0 0 30px rgba(255,255,255,0.08);
+    }
+
+    /* QR */
+    .qr-section{
+      min-height:70vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      gap:15px;
+      background:#050505;
+      text-align:center;
+      padding:40px 15px;
+    }
+
+    .qr-section img{
+      width:180px;
+      max-width:80%;
+      border-radius:10px;
+      background:#fff;
+      padding:8px;
+    }
+
+    /* شخصية */
+    .character{
+      position:fixed;
+      bottom:10px;
+      right:10px;
+      width:120px;
+      max-width:28vw;
+      opacity:0.9;
+      z-index:10;
+      pointer-events:none;
+    }
+
+    footer{
+      text-align:center;
+      padding:15px;
+      font-size:12px;
+      opacity:0.5;
+      background:#000;
+      direction:ltr;
+    }
+
+    @media (max-width:600px){
+      .hero h1{
+        font-size:32px;
+      }
+
+      video{
+        width:95%;
+      }
+
+      .character{
+        width:90px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- صوت خلفي -->
+  <audio autoplay loop>
+    <source src="https://drive.google.com/uc?export=download&id=1fjYo5djOr1wcvS_WOI-9MtYm36Xvz1P_" type="audio/mp3">
+    المتصفح لا يدعم تشغيل الصوت.
+  </audio>
+
+  <!-- البداية -->
+  <section class="hero">
+    <h1>Project Experience</h1>
+    <p>اضغط للمتابعة</p>
+    <button class="btn" onclick="document.getElementById('video').scrollIntoView({behavior:'smooth'})">
+      دخول
+    </button>
+  </section>
+
+  <!-- الفيديو -->
+  <section class="video-section" id="video">
+    <h2>الفيديو</h2>
+
+    <video controls autoplay muted playsinline>
+      <source src="https://drive.google.com/uc?export=download&id=18CKejfEnruvH89TYe2h-PpGXv2styFGE" type="video/mp4">
+      المتصفح لا يدعم تشغيل الفيديو.
+    </video>
+  </section>
+
+  <!-- QR -->
+  <section class="qr-section">
+    <h2>امسح الكود</h2>
+    <img src="https://mywebar.com/qr/927738" alt="QR Code">
+    <p>ادخل التجربة</p>
+  </section>
+
+  <!-- شخصية -->
+  <img class="character" src="https://drive.google.com/uc?export=download&id=1XsBBi4a9JhulChaOBN3SMqG1vB_LANnw" alt="Character" />
+
+  <footer>
+    © Project Landing Page
+  </footer>
+
+</body>
+</html>
